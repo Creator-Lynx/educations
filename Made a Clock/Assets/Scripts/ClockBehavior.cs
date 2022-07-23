@@ -17,4 +17,9 @@ public class ClockBehavior : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        Application.targetFrameRate = 30;
+    }
+
 }
