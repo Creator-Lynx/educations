@@ -22,7 +22,7 @@ public class CameraRotatingByAccelerometer : MonoBehaviour
         transform.LookAt(target);
         var acc = Input.acceleration * accelerationFactor;
         acceleration = new Vector3(-acc.x, acc.z, 0);
-        var moving = Vector3.SmoothDamp(transform.position, shift + acceleration, ref delta, lerpSpeed);
+        var moving = Vector3.Lerp(transform.position, shift + acceleration, lerpSpeed);
         transform.position = moving;
         /*transform.position = new Vector3(Mathf.Clamp(moving.x, shift.x - 8, shift.x + 8),
                                         Mathf.Clamp(moving.y, shift.y - 8, shift.y + 8),
