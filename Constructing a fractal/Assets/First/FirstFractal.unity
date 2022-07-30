@@ -361,7 +361,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 101
+  field of view: 94
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -386,13 +386,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.019653302, y: -0.11282172, z: -0.002247997, w: 0.99341834}
-  m_LocalPosition: {x: 29, y: -5.1, z: -126.2}
+  m_LocalRotation: {x: -0.059638873, y: -0.81838673, z: -0.086527035, w: 0.56497747}
+  m_LocalPosition: {x: 38.5, y: -51.707005, z: 68.82893}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.267, y: -12.959, z: -0.004637218}
 --- !u!111 &963194229
 Animation:
   m_ObjectHideFlags: 0
@@ -405,8 +405,9 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 033d7189bd12cde4e88a09073fe00489, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 033d7189bd12cde4e88a09073fe00489, type: 2}
+  - {fileID: 7400000, guid: 04b15cbef8d694a438bcab6f17c6ebb1, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &2112753285
@@ -436,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 2112753285}
   m_LocalRotation: {x: 0.4790053, y: 0.25006595, z: -0.14450145, w: 0.8289392}
   m_LocalPosition: {x: -10.2, y: 0, z: 51}
-  m_LocalScale: {x: 90.05, y: 90.05, z: 90.05}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: 8555084fa7d955b4c8e279dca33f1eaf, type: 2}
-  maxDepth: 7
+  maxDepth: 9
   childScale: 0.5
 --- !u!111 &2112753288
 Animation:
@@ -466,11 +467,10 @@ Animation:
   m_GameObject: {fileID: 2112753285}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: f02aab0e855eb4e40bb2c3cfd252f068, type: 2}
   m_Animations:
-  - {fileID: 0}
   - {fileID: 7400000, guid: f02aab0e855eb4e40bb2c3cfd252f068, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0

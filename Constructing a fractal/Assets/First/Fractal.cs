@@ -22,11 +22,7 @@ public class Fractal : MonoBehaviour
         gameObject.AddComponent<MeshRenderer>().material = material;
         if (depth < maxDepth)
         {
-            StartCoroutine(Init());
-            //new GameObject("Fractal Child").AddComponent<Fractal>().Initialize(this, Vector3.back);
-            //new GameObject("Fractal Child").AddComponent<Fractal>().Initialize(this, Vector3.right);
-            //new GameObject("Fractal Child").AddComponent<Fractal>().Initialize(this, Vector3.forward);
-            //new GameObject("Fractal Child").AddComponent<Fractal>().Initialize(this, Vector3.left);
+            StartCoroutine(CreateChildren());
         }
 
     }
@@ -44,19 +40,24 @@ public class Fractal : MonoBehaviour
         transform.localPosition = (0.5f + 0.5f * childScale) * direction;
     }
 
-    IEnumerator Init()
+    IEnumerator CreateChildren()
     {
         yield return new WaitForSeconds(0.4f);
         new GameObject("Fractal Child").AddComponent<Fractal>().
             Initialize(this, Vector3.back, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
         new GameObject("Fractal Child").AddComponent<Fractal>().
             Initialize(this, Vector3.right, Quaternion.AngleAxis(90f, Vector3.down));
+        yield return new WaitForSeconds(0.2f);
         new GameObject("Fractal Child").AddComponent<Fractal>().
             Initialize(this, Vector3.left, Quaternion.AngleAxis(-90f, Vector3.down));
 
         if (depth == 0)
+        {
+            yield return new WaitForSeconds(0.2f);
             new GameObject("Fractal Child").AddComponent<Fractal>().
                 Initialize(this, Vector3.forward, Quaternion.AngleAxis(180f, Vector3.down));
+        }
     }
 
 }
